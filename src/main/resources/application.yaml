@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: apiReactiva
+
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/productdb
+    username: postgres
+    password: postgres
+
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql
+
+logging:
+  level:
+    org.springframework.r2dbc: DEBUG
