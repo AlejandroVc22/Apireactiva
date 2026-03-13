@@ -6,7 +6,9 @@ spring:
     name: apiReactiva
 
   r2dbc:
-    url: ${SPRING_R2DBC_URL:r2dbc:postgresql://localhost:5432/productdb}
+    host: ${SPRING_R2DBC_HOST:localhost}
+    port: ${SPRING_R2DBC_PORT:5432}
+    database: ${SPRING_R2DBC_DATABASE:productdb}
     username: ${SPRING_R2DBC_USERNAME:postgres}
     password: ${SPRING_R2DBC_PASSWORD:postgres}
 
